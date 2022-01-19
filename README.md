@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Working with Olga to separate concerns in a React app
+
+- [ ] Get the props to go to storybook
+- [ ] Get storybook to show multiple views
+- [ ] add a refresh button
+- [ ] add jest testing
+- [ ] get the business logic in a separate file
+ 
+## Original info:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -4,9 +4,10 @@ import logo from './logo.svg';
 
 type SimpleViewProps = {
     title: string
+    refresh: () => void
 }
 
-function SimpleView({ title }: SimpleViewProps) {
+function SimpleView({ title, refresh }: SimpleViewProps) {
     return (
         <div className="App" >
             <header className="App-header" >
@@ -16,7 +17,7 @@ function SimpleView({ title }: SimpleViewProps) {
                 <p>
                     {title}
                 </p>
-                <button onClick={() => { }}>Click me</button>
+                <button onClick={refresh}>Click me</button>
 
             </header>
         </div>

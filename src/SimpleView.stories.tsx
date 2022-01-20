@@ -8,7 +8,7 @@ export default {
     component: SimpleView,
 } as ComponentMeta<typeof SimpleView>;
 
-const Template: ComponentStory<typeof SimpleView> = (args) => <SimpleView title="Valid title" />;
+const Template: ComponentStory<typeof SimpleView> = (args) => <SimpleView title="Valid title" refresh={() => { }} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {

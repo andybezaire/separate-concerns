@@ -1,21 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import logo from './logo.svg';
-import { createModel } from './Model'
-
-const Model = createModel({ title: "Happy functional" })
-
-const refresh = () => {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-        .then(response => response.json())
-        .then(json => {
-            Model.setModel({ title: json.title })
-        })
-
-}
+import { useModelContext } from './Model'
+import { ModelContext, RefreshContext } from './App'
 
 function SimpleView() {
-    const { model } = Model.useModel()
+    const { title } = useModelContext(ModelContext)
+    const refresh = useContext(RefreshContext)
 
     return (
         <div className="App" >
@@ -24,7 +15,7 @@ function SimpleView() {
                 <img src={logo} className="App-logo" alt="logo" />
 
                 <p>
-                    {model.title}
+                    {title}
                 </p>
                 <button onClick={refresh}>Click me</button>
 

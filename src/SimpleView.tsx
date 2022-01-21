@@ -1,13 +1,22 @@
 import React from 'react';
 import './App.css';
 import logo from './logo.svg';
+import { useModel, setModel, createModel } from './Model'
 
-type SimpleViewProps = {
-    title: string
-    refresh: () => void
+const refresh = () => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(json => {
+            setModel(json.title)
+        })
+
 }
 
-function SimpleView({ title, refresh }: SimpleViewProps) {
+const model = createModel("Happy functional")
+
+function SimpleView() {
+    const { title } = useModel()
+
     return (
         <div className="App" >
             <header className="App-header" >

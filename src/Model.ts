@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface UsableModel<T> {
+type UsableModel<T> = {
     useModel: () => { model: T }
     setModel: (newValue: T) => void
 }

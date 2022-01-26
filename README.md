@@ -1,11 +1,40 @@
 # Working with Olga to separate concerns in a React app
 
+note: working on the UserList component
+
+- [ ] Add Styled components
 - [ ] Get the props to go to storybook
 - [ ] Get storybook to show multiple views
 - [ ] add a refresh button
 - [ ] add jest testing
 - [ ] get the business logic in a separate file
- 
+
+# Quickstart Gude
+
+## running the server
+
+`npm run start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser, if the browser doesn't already auto launch.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+## lauching storybook
+
+`npm run storybook`
+
+Runs the storybook.\
+Open [http://localhost:6006](http://localhost:6006) to view the storybook, if the browser doesn't already auto launch.
+
+The page will reload if you make edits.
+
+### Open storybook in VS Code
+
+`command-p` and then type `>` and sercah for simple browser
+open url `http://localhost:6006`
+
 ## Original info:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

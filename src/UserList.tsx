@@ -1,18 +1,24 @@
 import React from "react";
+import styled from "styled-components";
+import { UserListUnit } from "./UserListUnit";
+
 
 type UserListProps = {
   temp: string;
 };
 
-function UserList({ temp }: UserListProps) {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Learn React!</p>
+const UserListEl = styled.div`
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+`;
 
-        <button onClick={() => {}}>Click me</button>
-      </header>
-    </div>
+export function UserList({ temp }: UserListProps) {
+  return (
+    <UserListEl className="App">
+        <UserListUnit />
+    </UserListEl>
   );
 }
 

@@ -1,11 +1,10 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { UserList } from "./UserList";
-import { UserListUnit } from "./UserListUnit";
+import {UserListUnit} from "./UserListUnit";
 
 export default {
-    title: "UserList",
-    component: UserList,
+    title: "UserList View",
+    component: UserListUnit,
     argTypes: {
         title: {
             defaultValue: "Nancy",
@@ -21,14 +20,14 @@ export default {
         },
 
     },
-} as ComponentMeta<typeof UserList>;
+} as ComponentMeta<typeof UserListUnit>;
 
-const Template: ComponentStory<typeof UserList> = (args) => (
+const Template: ComponentStory<typeof UserListUnit> = (args) => (
   <>
-    <UserList {...args}>
+    <UserListUnit {...args}>
         {" "}
-        <UserListUnit {...args}>{" "}</UserListUnit>
-    </UserList>
+        <UserListUnit {...args} />{" "}
+    </UserListUnit>
   </>
 );
 
